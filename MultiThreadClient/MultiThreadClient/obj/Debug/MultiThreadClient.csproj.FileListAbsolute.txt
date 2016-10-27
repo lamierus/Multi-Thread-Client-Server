@@ -7,3 +7,6 @@ C:\Users\simon.je\Documents\Visual Studio 2015\Projects\MultiThreadClient\MultiT
 C:\Users\simon.je\Documents\Visual Studio 2015\Projects\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.csproj.GenerateResource.Cache
 C:\Users\simon.je\Documents\Visual Studio 2015\Projects\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.exe
 C:\Users\simon.je\Documents\Visual Studio 2015\Projects\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.pdb
+C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\bin\Debug\MultiThreadClient.exe.config
+C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.exe
+C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.pdb
