@@ -28,19 +28,14 @@ namespace MultiThreadServer {
             byte[] inStream = new byte[10025];
             NetworkStream networkStream;
 
-            while ((true)) {
+            while (true) {
                 try {
                     requestCount++;
                     networkStream = ClientSocket.GetStream();
                     networkStream.Read(inStream, 0, ClientSocket.ReceiveBufferSize);
                     ReceivePack = new Packet(inStream);
-                    Console.WriteLine(" >> " + "From client - " + ReceivePack.ChatName + ClientNo.ToString() + ": " + ReceivePack.ChatMessage);
+                    Console.WriteLine(" >> " + "From client - " + ReceivePack.ChatName + ": " + ReceivePack.ChatMessage);
                     Program.Broadcast(ReceivePack, true);
-
-                    SendPack.ChatMessage = "Response to client(" + ReceivePack.ChatName + "): " + requestCount.ToString();
-                    networkStream.Write(SendPack.GetDataStream(), 0, SendPack.Length);
-                    networkStream.Flush();
-                    Console.WriteLine(" >> " + SendPack.ChatMessage);
                 } catch (Exception ex) {
                     Console.WriteLine(" >> " + ex.Message.ToString());
                     Console.WriteLine(" >> Client " + ClientNo + " Disconnected");

@@ -13,6 +13,7 @@ C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\Mult
 C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\bin\Debug\MultiThreadClient.exe
 C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\bin\Debug\MultiThreadClient.pdb
 C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.csprojResolveAssemblyReference.cache
-C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.Form1.resources
 C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.Properties.Resources.resources
 C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.csproj.GenerateResource.Cache
+C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.ChatWindow.resources
+C:\Users\simon.je\Source\Repos\Multi-Thread-Client-Server\MultiThreadClient\MultiThreadClient\obj\Debug\MultiThreadClient.ConnectForm.resources

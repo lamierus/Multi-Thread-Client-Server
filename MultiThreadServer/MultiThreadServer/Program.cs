@@ -3,7 +3,6 @@ using System.Threading;
 using System.Net;
 using System.Net.Sockets;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MultiThreadServer {
     class Program {
@@ -41,6 +40,7 @@ namespace MultiThreadServer {
                     ClientList.Add(new Client());
                     ClientList[Counter++].startClient(clientSocket, Counter);
                 } catch (SocketException e) {
+                    Console.WriteLine(" >> Something Happened!! " + e.Message.ToString());
                     clientSocket.Close();
                     break;
                 }
@@ -49,8 +49,6 @@ namespace MultiThreadServer {
 
         public static void Broadcast(Packet packet, bool flag) {
             foreach (Client client in ClientList) {
-                //NetworkStream broadcastStream = client.ClientSocket.GetStream();
-
                 client.ClientSocket.GetStream().Write(packet.GetDataStream(), 0, packet.Length);
                 client.ClientSocket.GetStream().Flush();
             }
