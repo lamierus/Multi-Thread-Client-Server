@@ -11,6 +11,11 @@ namespace MultiThreadClient {
             InitializeComponent();
         }
 
+        /// <summary>
+        ///     this is it. a button with logic to send the entered IP and username then return that information.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConnect_Click(object sender, EventArgs e) {
             IPAddress ipAddress;
             if (IPAddress.TryParse(tbIPAddress.Text, out ipAddress)) {
@@ -22,6 +27,17 @@ namespace MultiThreadClient {
                 }
                 DialogResult = DialogResult.OK;
                 Close();
+            }
+        }
+
+        /// <summary>
+        ///     exit out of everything, so it doesn't open the other form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ConnectForm_FormClosed(object sender, FormClosedEventArgs e) {
+            if (DialogResult != DialogResult.OK) {
+                Environment.Exit(0);
             }
         }
     }

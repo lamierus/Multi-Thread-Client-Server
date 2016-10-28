@@ -10,6 +10,7 @@ namespace MultiThreadServer {
     // Description   -> |dataIdentifier|name length|message length|    name   |    message   |
     // Size in bytes -> |       4      |     4     |       4      |name length|message length|
 
+    //this is for the different data types to be sent via the packets
     public enum DataIdentifier {
         Message,
         LogIn,
@@ -33,6 +34,10 @@ namespace MultiThreadServer {
             ChatName = null;
         }
 
+        /// <summary>
+        ///     this is for interpreting the data received in a data stream into the different parts of the packet
+        /// </summary>
+        /// <param name="dataStream"></param>
         public Packet(byte[] dataStream) {
             // Read the data identifier from the beginning of the stream (4 bytes)
             ChatDataIdentifier = (DataIdentifier)BitConverter.ToInt32(dataStream, 0);
@@ -56,7 +61,10 @@ namespace MultiThreadServer {
                 ChatMessage = null;
         }
 
-        // Converts the packet into a byte array for sending/receiving 
+        /// <summary>
+        ///     Converts the packet into a byte array for sending
+        /// </summary>
+        /// <returns></returns>
         public byte[] GetDataStream() {
             List<byte> dataStream = new List<byte>();
 

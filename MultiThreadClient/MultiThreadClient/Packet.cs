@@ -23,7 +23,7 @@ namespace MultiThreadClient {
         public string ChatMessage { get; set; }
 
         public int Length {
-            get { return GetDataStream().Length; }
+            get { return CreateDataStream().Length; }
         }
 
         // Default Constructor
@@ -57,7 +57,7 @@ namespace MultiThreadClient {
         }
 
         // Converts the packet into a byte array for sending/receiving 
-        public byte[] GetDataStream() {
+        public byte[] CreateDataStream() {
             List<byte> dataStream = new List<byte>();
 
             // Add the dataIdentifier

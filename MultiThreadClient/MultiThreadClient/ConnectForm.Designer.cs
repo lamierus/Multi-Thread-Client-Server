@@ -38,6 +38,7 @@
             this.tbIPAddress.Name = "tbIPAddress";
             this.tbIPAddress.Size = new System.Drawing.Size(210, 24);
             this.tbIPAddress.TabIndex = 0;
+            this.tbIPAddress.Text = "127.0.0.1";
             // 
             // lblIPAddress
             // 
@@ -55,7 +56,7 @@
             this.btnConnect.Location = new System.Drawing.Point(91, 113);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 23);
-            this.btnConnect.TabIndex = 2;
+            this.btnConnect.TabIndex = 3;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -66,7 +67,9 @@
             this.tbUserName.Location = new System.Drawing.Point(27, 74);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(210, 24);
-            this.tbUserName.TabIndex = 3;
+            this.tbUserName.TabIndex = 2;
+            this.tbUserName.Text = "Client";
+            this.tbUserName.WordWrap = false;
             // 
             // lblUserName
             // 
@@ -90,6 +93,7 @@
             this.Controls.Add(this.tbIPAddress);
             this.Name = "ConnectForm";
             this.Text = "Connect to Server";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConnectForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

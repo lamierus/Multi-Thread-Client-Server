@@ -37,7 +37,7 @@
             this.lblStatus.Location = new System.Drawing.Point(39, 9);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblStatus.TabIndex = 0;
+            this.lblStatus.TabIndex = 4;
             // 
             // tbOutputBox
             // 
@@ -50,7 +50,7 @@
             this.tbOutputBox.ReadOnly = true;
             this.tbOutputBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbOutputBox.Size = new System.Drawing.Size(311, 192);
-            this.tbOutputBox.TabIndex = 1;
+            this.tbOutputBox.TabIndex = 3;
             this.tbOutputBox.TabStop = false;
             // 
             // btnSend
@@ -59,7 +59,7 @@
             this.btnSend.Location = new System.Drawing.Point(42, 270);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(260, 23);
-            this.btnSend.TabIndex = 2;
+            this.btnSend.TabIndex = 1;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -76,12 +76,14 @@
             this.tbInput.Location = new System.Drawing.Point(15, 244);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(311, 20);
-            this.tbInput.TabIndex = 3;
+            this.tbInput.TabIndex = 0;
+            this.tbInput.WordWrap = false;
             // 
             // ChatWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AcceptButton = this.btnSend;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(338, 305);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.btnSend);
@@ -89,7 +91,9 @@
             this.Controls.Add(this.lblStatus);
             this.Name = "ChatWindow";
             this.Text = "Multi Thread Chat";
-            this.Load += new System.EventHandler(this.ChatWindow_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChatWindow_FormClosed);
+            //this.Load += new System.EventHandler(this.ChatWindow_Load);
+            this.Activated += new System.EventHandler(this.ChatWindow_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
