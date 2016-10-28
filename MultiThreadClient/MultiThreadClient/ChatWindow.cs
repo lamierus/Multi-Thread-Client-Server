@@ -16,18 +16,24 @@ namespace MultiThreadClient {
             InitializeComponent();
             
         }
-
-        private void ChatWindow_Load(object sender, EventArgs e) {
-            
-        }
-
+        
+        /// <summary>
+        ///     I prefer to use the _Activated, instead of the _Load, due to having the window drawn
+        ///     instead of just having a floating dialog
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChatWindow_Activated(object sender, EventArgs e) {
             if (!WindowLoaded) {
                 WindowLoaded = true;
                 using (var ipForm = new ConnectForm()) {
                     var result = ipForm.ShowDialog();
                     if (result == DialogResult.OK) {
+                        
+                        //this sets the client's packet username as well as displays it to the user
                         msg("Client Started for user: " + (SendPacket.ChatName = ipForm.ReturnUserName));
+                        
+                        //this loop allows for multiple attempts to connect to the server before timing out
                         for (int i = 0; i < 5; i++) {
                             msg(">> Attempting to connect...");
                             try {
@@ -35,6 +41,8 @@ namespace MultiThreadClient {
                             } catch (Exception ex) {
                                 msg(ex.Message);
                             }
+
+                            //once connected, the client sends a packet to the server to agknowledge logging in.
                             if (ClientSocket.Connected) {
                                 NetworkStream loginStream = ClientSocket.GetStream();
                                 SendPacket.ChatDataIdentifier = DataIdentifier.LogIn;

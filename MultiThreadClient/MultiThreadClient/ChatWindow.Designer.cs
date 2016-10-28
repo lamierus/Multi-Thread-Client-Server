@@ -92,7 +92,6 @@
             this.Name = "ChatWindow";
             this.Text = "Multi Thread Chat";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChatWindow_FormClosed);
-            //this.Load += new System.EventHandler(this.ChatWindow_Load);
             this.Activated += new System.EventHandler(this.ChatWindow_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
